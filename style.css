@@ -1,0 +1,464 @@
+
+
+/*General page styling*/
+* {
+    margin: 0; 
+    padding: 0; 
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe,
+header, nav, article, aside, footer, hgroup, section,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin:0;
+    padding:0;
+    border:0;
+    outline: 0;
+    font:inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size:100%;
+    vertical-align:baseline;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, article,section ,paragraph{
+    display: block;
+}
+
+html, body{
+    overflow-x: hidden;	
+}
+
+/* Reset */
+html, body, h1, p, a, div, section {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font: inherit;
+}
+
+html, body, .container {
+    /* Basic */
+    height: 100%;
+    font-family: 'Brandon Grotesque Regular','Helvetica Neue',Arial,Helvetica,sans-serif;
+    color: #000000;
+    line-height: 32px;
+    margin: 0;
+}
+
+.body {
+    /* Location of the image */
+    background-image: url(image/luxury3.jpg);
+
+    /* Image is centered vertically and horizontally at all times */
+    background-position: center center;
+
+    /* Image doesn't repeat */
+    background-repeat: no-repeat;
+
+    /* Makes the image fixed in the viewport so that it doesn't move when 
+       the content height is greater than the image height */
+    background-attachment: fixed;
+
+    /* This is what makes the background image rescale based on its container's size */
+    background-size: cover;
+
+    /* Pick a solid background color that will be displayed while the background image is loading */
+    background-color:#4f5b66;
+
+    /* SHORTHAND CSS NOTATION
+     * background: url(background-photo.jpg) center center cover no-repeat fixed;
+     */
+
+    animation-name: imageSlider;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-delay: 0s;
+
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration:0.5s;
+
+    -webkit-transition: all 0.40s ease-in-out;
+    -moz-transition: all 0.40s ease-in-out;
+    -o-transition: all 0.40s ease-in-out;
+    -ms-transition: all 0.40s ease-in-out;
+    transition: all 0.40s ease-in-out;
+}
+
+@keyframes imageSlider {
+    0%{
+        background-image: url(image/luxury1.jpg);
+    }
+    25%{
+        background-image: url(image/jungle.jpg);
+    }
+    50%{
+        background-image: url(image/imageplane.jpg);
+    }
+    75%{
+        background-image: url(image/luxury4.jpg);
+    }
+    100%{
+        background-image: url(image/luxury1.jpg);
+    }
+}
+
+
+
+.topContent{
+    height: 100vh;
+    left: 2vw;
+    background:rgba(0,0,0,0.4);
+    z-index: 2;
+    padding: 4vmin;
+}
+
+.bottomContent{
+	background: #f8f8ff;
+}
+
+.mainContent{
+	padding: 50px;
+}
+
+
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	color: #D18181;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 50px;
+	font-weight: 600;
+	text-shadow: 2px 2px blue;
+	letter-spacing: -3px;
+	line-height: 1;
+	
+	position: relative;
+	left: 30%;
+}
+
+h2   {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+  color: #7C1A1A;
+  left: 40%;
+  position: relative;
+}
+
+h3   {color: red;}
+
+h4   {
+	color: white;
+	font-size: 10px;
+	left: 50%;
+}
+
+p    {
+	color: black;
+	font-family: cursive;
+	font-size: 20px;
+	text-align: center;
+
+	}
+
+
+/*header styling*/
+
+#more {display: none;}
+
+#topHeader {
+  width: 100%;
+  background-color: #f8f8ff;
+  display: inline-block;  
+  text-align: left;
+  padding: 12px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+/* Style the navigation bar */
+
+#search input[type=text] {
+  width: 400px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;  
+  padding: 12px 20px 12px 40px;
+  right: 0px;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+}
+
+/*input[type=text]:focus {
+  width: 30%;
+}*/
+
+/*side menu design*/
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+} 
+
+#main span {
+	font-size:30px;
+	cursor:pointer;
+	left: 0px;
+}
+
+/*.topnav a:hover {
+  background-color: blue;
+  color: black;
+}*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: orange;
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 40px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 20px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  padding: 20px;
+  font-weight: 400;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 250px) {
+  .sidenav {
+  	padding-top: 15px;
+  }
+  .sidenav a {
+  	font-size: 15px;
+  }
+}
+
+
+
+/*body styling*/
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 560;
+  height: 445;
+}
+
+
+/*register form*/
+/* Full-width input fields */
+.registerform {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+.registerform:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: green;
+  color: white;
+  padding: 14px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+  opacity: 0.9;
+  position: center;
+}
+
+button:hover {
+  opacity:1;
+}
+
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #A9A9A9;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+
+
+
+/*footer styling*/
+
+footer{
+	padding: 20px;
+	background-color: #6F6B6B;
+	bottom: 0;
+	text-align: left;
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.submitbtn {
+  border: none;
+  background-color: grey;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+
+
+.comment {
+      width: 400px;
+  }
+
+.commentsform {
+  width: 400px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.comment{
+      width: 400px;
+      height: 100px;
+      padding: 10px;
+      background-color: #d0e2bc;
+      }
+
